@@ -11,8 +11,7 @@
 ; Factorial version loop/recur (iterativa)
 (defn fact-v2
   [n]
-  (loop [accum 1
-         i n]
+  (loop [accum 1 i n]
     (if (zero? i)
       accum
       (recur (*' accum i) (dec i)))))
@@ -23,9 +22,9 @@
   (reduce *' (range 1 (inc n))))
 
 
-(fact-v3 0)
+(fact-v1 0)
 (fact-v3 1)
-(fact-v3 3)
+(fact-v2 3)
 (fact-v3 5)
 (fact-v3 20)
 (fact-v3 100000)
